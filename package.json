@@ -15,6 +15,8 @@
     "vue": "^2.5.16"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.3.4",
+    "@vue/babel-preset-app": "^3.12.1",
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.16",
     "@vue/cli-service": "^4.5.11",
@@ -56,9 +58,19 @@
     "not ie <= 8"
   ],
   "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
     "transform": {
       "^.+\\.js$": "babel-jest",
       "^.+\\.vue$": "vue-jest"
+    },
+    "globals": {
+      "vue-jest": {
+        "tsConfig": false
+      }
     }
   }
 }
