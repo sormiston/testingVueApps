@@ -72,16 +72,16 @@ describe('ProgressBar.vue', () => {
     await nextTick()
     expect(window.clearInterval).toHaveBeenCalledWith(123)
   })
-  
+
   test("has class 'error' if fail method called", async () => {
     const wrapper = shallowMount(ProgressBar)
     wrapper.vm.fail()
     await nextTick()
     expect(wrapper.classes()).toContain('error')
   })
-  
+
   // kinda dumb
-  test("has width of 100% if fail method called", async () => {
+  test('has width of 100% if fail method called', async () => {
     const wrapper = shallowMount(ProgressBar)
     wrapper.vm.fail()
     await nextTick
