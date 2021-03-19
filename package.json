@@ -34,6 +34,7 @@
     "extends": [
       "plugin:vue/essential",
       "@vue/standard"
+      
     ],
     "rules": {
       "prefer-promise-reject-errors": 0,
