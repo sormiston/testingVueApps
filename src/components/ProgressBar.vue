@@ -1,5 +1,6 @@
 <template>
   <div
+    v-show="!isHidden"
     :class="{ hidden: isHidden, error: hasError }"
     :style="{ width: `${percent}%` }"
   />
@@ -34,3 +35,21 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  div {
+    height: 1.5rem;
+    background: linear-gradient(
+      to right,
+      #1f005c,
+      #5b0060,
+      #870160,
+      #ac255e,
+      #ca485c,
+      #e16b5c,
+      #f39060,
+      #ffb56b
+    );
+    background-size: 100vw;
+  }
+</style>
